@@ -1,0 +1,23 @@
+---
+description: Helper Tool (progress dashboard) project rules — always apply
+alwaysApply: true
+---
+
+# Helper Tool — Vardhman Vault Progress Dashboard
+
+This repo (`vardhman-vault-dashboard`, called **"Helper Tool"** in chat with Samuel) is the progress dashboard for **Vault** (`vardhman-vault`, the main GLMS app). Separate repo, **same rules** — not a separate standard.
+
+Before writing any code, read `PROJECT_RULES.md` at this repo's root in full. The authoritative copy lives in the `vardhman-vault` repo — if the two ever visibly disagree, flag it to Samuel rather than silently trusting either one.
+
+**Non-negotiable, repeated here because it matters most:**
+
+1. No filling in blanks — log ambiguity rather than silently resolving it.
+2. One file at a time — write, typecheck, fix, commit, next.
+3. You never mark work complete. Samuel does, via PR approval.
+4. Every non-trivial decision gets logged — Helper Tool has no `DECISIONS.md` of its own; log in Vault's `DECISIONS.md` (single project-wide decision log, not duplicated per repo).
+
+**Git workflow — PROJECT_RULES.md §3.6.** Conventional Commits (`feat(scope): description`), never commit straight to `main`, one reviewable PR at a time, squash-merge.
+
+**Specific to this repo:** the `build_status` table this app reads/writes lives in **Vault's staging Supabase project**, not a separate one (PROJECT_RULES.md §3.5) — do not provision a new Supabase project for this app. The `/api/narrate` route is the one place this app writes rather than only reads; do not add other write paths without checking PROJECT_RULES.md §3.5's RLS rationale first.
+
+Do not modify this file or `PROJECT_RULES.md` without flagging it explicitly to Samuel first.

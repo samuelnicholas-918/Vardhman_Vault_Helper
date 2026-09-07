@@ -1,0 +1,16 @@
+version: 2
+updates:
+  # GitHub Actions — resolves the staleness tradeoff from SHA-pinning
+  # actions in ci.yml/update-dashboard.yml (see comment there). Dependabot
+  # opens a PR when a pinned action has a new release; a human still reviews
+  # and merges it, same as any other dependency bump — nothing auto-merges.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  # npm dependencies — standard weekly check, same review-before-merge rule.
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"

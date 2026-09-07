@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* Device-specific breakpoints, tuned to Samuel's actual devices rather than
+   generic Tailwind defaults — PROJECT_RULES.md §3.5:
+   - default (no prefix): Samsung Galaxy S25 Ultra portrait, ~384-480px
+   - tablet:              Xiaomi Pad 7 portrait/landscape, ~768px+
+   - laptop:              MacBook M1 Air 13", ~1280px+ */
+@theme {
+  --breakpoint-tablet: 768px;
+  --breakpoint-laptop: 1280px;
+
+  --color-ambient-bg: #05070a;
+  --color-ambient-panel: #0d1117;
+  --color-ambient-glow: #34d5c8;
+  --color-ambient-glow-dim: #1b6b64;
+  --color-ambient-text: #e6f7f5;
+  --color-ambient-text-dim: #7a8a94;
+  --color-ambient-alert: #e8664a;
+}
+
+:root {
+  --background: var(--color-ambient-bg);
+  --foreground: var(--color-ambient-text);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: ui-monospace, "SF Mono", "Cascadia Code", Consolas, monospace;
+}
+
+.glow-text {
+  text-shadow: 0 0 18px var(--color-ambient-glow-dim);
+}
+
+.glow-border {
+  box-shadow:
+    0 0 0 1px rgba(52, 213, 200, 0.15),
+    0 0 24px rgba(52, 213, 200, 0.08);
+}
+
+@keyframes pulse-live {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.live-dot {
+  animation: pulse-live 2s ease-in-out infinite;
+}
