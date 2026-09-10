@@ -11,3 +11,5 @@ If you hit an ambiguity not covered there: **stop and log it clearly in a commit
 Git workflow (PROJECT_RULES.md §3.6) applies here identically: Conventional Commits, never straight to `main`, one reviewable PR at a time, squash-merge.
 
 You never mark work complete. Samuel does, via PR approval.
+
+**Cursor Cloud:** follow the "Cursor Cloud specific instructions" section in `AGENTS.md`. Secrets come from the Cloud Agents dashboard, not `.env.local`. Use Vault staging Supabase only.

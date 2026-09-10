@@ -1,0 +1,23 @@
+{
+  "name": "vardhman-vault-helper",
+  "install": "HUSKY=0 npm ci",
+  "terminals": [
+    {
+      "name": "dev",
+      "command": "npm run dev",
+      "description": "Helper Tool Next.js already running on port 3000. Do not start a second dev server. Typecheck with `npm run typecheck`; lint with `npm run lint`."
+    }
+  ],
+  "ports": [
+    {
+      "name": "web",
+      "port": 3000
+    }
+  ],
+  "egressAllowlist": [
+    "registry.npmjs.org",
+    "*.supabase.co",
+    "mcp.supabase.com",
+    "api.anthropic.com"
+  ]
+}
