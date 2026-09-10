@@ -12,7 +12,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 This is **Helper Tool** (`github.com/samuelnicholas-918/Vardhman_Vault_Helper`), the progress dashboard for Vault. Same rules as Vault — not a separate standard. Vault is `github.com/samuelnicholas-918/Vardhman_Vault`.
 
-Read `PROJECT_RULES.md` (especially §3.5) before writing code. Non-trivial decisions go in Vault's `DECISIONS.md`, not a second log here.
+Read `PROJECT_RULES.md` (especially §3.5) before writing code. Non-trivial decisions go in Vault's `DECISIONS.md` and a matching `PROJECT_LOG.md` narrative entry, not a second log here.
 
 ### Machine
 

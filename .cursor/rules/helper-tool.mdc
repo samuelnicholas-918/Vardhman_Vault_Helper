@@ -14,7 +14,7 @@ Before writing any code, read `PROJECT_RULES.md` at this repo's root in full. Th
 1. No filling in blanks — log ambiguity rather than silently resolving it.
 2. One file at a time — write, typecheck, fix, commit, next.
 3. You never mark work complete. Samuel does, via PR approval.
-4. Every non-trivial decision gets logged — Helper Tool has no `DECISIONS.md` of its own; log in Vault's `DECISIONS.md` (single project-wide decision log, not duplicated per repo).
+4. Every non-trivial decision gets logged — Helper Tool has no `DECISIONS.md` of its own; log in Vault's `DECISIONS.md` (single project-wide decision log, not duplicated per repo) **and** append a matching narrative entry to Vault's `PROJECT_LOG.md` (sixth build log: chronological, plain-English Why/What/Refs; append-only).
 
 **Git workflow — PROJECT_RULES.md §3.6.** Conventional Commits (`feat(scope): description`), never commit straight to `main`, one reviewable PR at a time, squash-merge.
 
